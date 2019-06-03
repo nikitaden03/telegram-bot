@@ -1,3 +1,5 @@
+from telebot import types
+
 bio = types.InlineKeyboardButton(text='Биология', callback_data='bio')
 geo = types.InlineKeyboardButton(text='География', callback_data='geo')
 art = types.InlineKeyboardButton(text='Искусство', callback_data='art')

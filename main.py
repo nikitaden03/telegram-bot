@@ -3,11 +3,10 @@
 
 
 from pprint import pprint
-from subject import *
 import telebot
 from telebot import apihelper
 from telebot import types
-
+from subject import *
 
 apihelper.proxy = {'https': 'socks5://207.97.174.134:1080'}
 bot = telebot.TeleBot('836764194:AAHd4hDv6wvLNXrLqQcQbnVq0Kv1HVvIl1g')
@@ -34,7 +33,6 @@ def get_home_work(messgae):
 @bot.callback_query_handler(func=lambda call: True)
 def callback_worker(call):
     bot.send_message(call.message.chat.id, call.data)
-    pprint(call.message.chat.id)
 
 
 bot.polling()
